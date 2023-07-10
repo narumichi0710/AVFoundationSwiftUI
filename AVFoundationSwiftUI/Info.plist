@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>It&apos;s required for saving photos and editting photos.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>It&apos;s required for taking photos.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>It&apos;s required for taking video with sounds.</string>
+</dict>
+</plist>
