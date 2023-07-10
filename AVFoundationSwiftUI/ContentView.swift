@@ -6,16 +6,25 @@
 //
 
 import SwiftUI
+import PermissionsSwiftUIPhoto
+import PermissionsSwiftUICamera
+import PermissionsSwiftUIMicrophone
 
 struct ContentView: View {
+    @State var isShow: Bool = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                isShow.toggle()
+            } label: {
+                Text("Permission Check")
+            }
         }
-        .padding()
+        .JMAlert(
+            showModal: $isShow,
+            for: [.photo, .camera, .microphone],
+            autoCheckAuthorization: false
+        )
     }
 }
 

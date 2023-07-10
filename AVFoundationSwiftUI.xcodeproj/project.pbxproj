@@ -11,6 +11,9 @@
 		381591E32A5C2C300035A5BF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381591E22A5C2C300035A5BF /* ContentView.swift */; };
 		381591E52A5C2C330035A5BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381591E42A5C2C330035A5BF /* Assets.xcassets */; };
 		381591E92A5C2C330035A5BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 381591E82A5C2C330035A5BF /* Preview Assets.xcassets */; };
+		381591F32A5C56FE0035A5BF /* PermissionsSwiftUICamera in Frameworks */ = {isa = PBXBuildFile; productRef = 381591F22A5C56FE0035A5BF /* PermissionsSwiftUICamera */; };
+		381591F52A5C56FE0035A5BF /* PermissionsSwiftUIMicrophone in Frameworks */ = {isa = PBXBuildFile; productRef = 381591F42A5C56FE0035A5BF /* PermissionsSwiftUIMicrophone */; };
+		381591F72A5C56FE0035A5BF /* PermissionsSwiftUIPhoto in Frameworks */ = {isa = PBXBuildFile; productRef = 381591F62A5C56FE0035A5BF /* PermissionsSwiftUIPhoto */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				381591F32A5C56FE0035A5BF /* PermissionsSwiftUICamera in Frameworks */,
+				381591F52A5C56FE0035A5BF /* PermissionsSwiftUIMicrophone in Frameworks */,
+				381591F72A5C56FE0035A5BF /* PermissionsSwiftUIPhoto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +93,11 @@
 			dependencies = (
 			);
 			name = AVFoundationSwiftUI;
+			packageProductDependencies = (
+				381591F22A5C56FE0035A5BF /* PermissionsSwiftUICamera */,
+				381591F42A5C56FE0035A5BF /* PermissionsSwiftUIMicrophone */,
+				381591F62A5C56FE0035A5BF /* PermissionsSwiftUIPhoto */,
+			);
 			productName = AVFoundationSwiftUI;
 			productReference = 381591DD2A5C2C300035A5BF /* AVFoundationSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -115,6 +126,9 @@
 				Base,
 			);
 			mainGroup = 381591D42A5C2C300035A5BF;
+			packageReferences = (
+				381591F12A5C56FE0035A5BF /* XCRemoteSwiftPackageReference "PermissionsSwiftUI" */,
+			);
 			productRefGroup = 381591DE2A5C2C300035A5BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -369,6 +383,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		381591F12A5C56FE0035A5BF /* XCRemoteSwiftPackageReference "PermissionsSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jevonmao/PermissionsSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		381591F22A5C56FE0035A5BF /* PermissionsSwiftUICamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 381591F12A5C56FE0035A5BF /* XCRemoteSwiftPackageReference "PermissionsSwiftUI" */;
+			productName = PermissionsSwiftUICamera;
+		};
+		381591F42A5C56FE0035A5BF /* PermissionsSwiftUIMicrophone */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 381591F12A5C56FE0035A5BF /* XCRemoteSwiftPackageReference "PermissionsSwiftUI" */;
+			productName = PermissionsSwiftUIMicrophone;
+		};
+		381591F62A5C56FE0035A5BF /* PermissionsSwiftUIPhoto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 381591F12A5C56FE0035A5BF /* XCRemoteSwiftPackageReference "PermissionsSwiftUI" */;
+			productName = PermissionsSwiftUIPhoto;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 381591D52A5C2C300035A5BF /* Project object */;
 }
